@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		369903AE155C313100B729DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903AD155C313100B729DD /* UIKit.framework */; };
+		369903B0155C313100B729DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903AF155C313100B729DD /* Foundation.framework */; };
+		369903B2155C313100B729DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903B1155C313100B729DD /* CoreGraphics.framework */; };
+		369903B8155C313100B729DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 369903B6155C313100B729DD /* InfoPlist.strings */; };
+		369903BA155C313100B729DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 369903B9155C313100B729DD /* main.m */; };
+		369903BE155C313100B729DD /* MoustacheFaceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 369903BD155C313100B729DD /* MoustacheFaceAppDelegate.m */; };
+		369903C1155C313100B729DD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369903BF155C313100B729DD /* MainStoryboard.storyboard */; };
+		369903C4155C313100B729DD /* MoustacheFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369903C3155C313100B729DD /* MoustacheFaceViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		369903A9155C313100B729DD /* MoustacheFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoustacheFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		369903AD155C313100B729DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		369903AF155C313100B729DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		369903B1155C313100B729DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		369903B5155C313100B729DD /* MoustacheFace-Info.plist */ = {isa = PBXFileReference; path = "MoustacheFace-Info.plist"; sourceTree = "<group>"; };
+		369903B7155C313100B729DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		369903B9155C313100B729DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		369903BB155C313100B729DD /* MoustacheFace-Prefix.pch */ = {isa = PBXFileReference; path = "MoustacheFace-Prefix.pch"; sourceTree = "<group>"; };
+		369903BC155C313100B729DD /* MoustacheFaceAppDelegate.h */ = {isa = PBXFileReference; path = MoustacheFaceAppDelegate.h; sourceTree = "<group>"; };
+		369903BD155C313100B729DD /* MoustacheFaceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoustacheFaceAppDelegate.m; sourceTree = "<group>"; };
+		369903C0155C313100B729DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		369903C2155C313100B729DD /* MoustacheFaceViewController.h */ = {isa = PBXFileReference; path = MoustacheFaceViewController.h; sourceTree = "<group>"; };
+		369903C3155C313100B729DD /* MoustacheFaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoustacheFaceViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		369903A6155C313100B729DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369903AE155C313100B729DD /* UIKit.framework in Frameworks */,
+				369903B0155C313100B729DD /* Foundation.framework in Frameworks */,
+				369903B2155C313100B729DD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3699039E155C313000B729DD = {
+			isa = PBXGroup;
+			children = (
+				369903B3155C313100B729DD /* MoustacheFace */,
+				369903AC155C313100B729DD /* Frameworks */,
+				369903AA155C313100B729DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		369903AA155C313100B729DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				369903A9155C313100B729DD /* MoustacheFace.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		369903AC155C313100B729DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				369903AD155C313100B729DD /* UIKit.framework */,
+				369903AF155C313100B729DD /* Foundation.framework */,
+				369903B1155C313100B729DD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		369903B3155C313100B729DD /* MoustacheFace */ = {
+			isa = PBXGroup;
+			children = (
+				369903BC155C313100B729DD /* MoustacheFaceAppDelegate.h */,
+				369903BD155C313100B729DD /* MoustacheFaceAppDelegate.m */,
+				369903BF155C313100B729DD /* MainStoryboard.storyboard */,
+				369903C2155C313100B729DD /* MoustacheFaceViewController.h */,
+				369903C3155C313100B729DD /* MoustacheFaceViewController.m */,
+				369903B4155C313100B729DD /* Supporting Files */,
+			);
+			path = MoustacheFace;
+			sourceTree = "<group>";
+		};
+		369903B4155C313100B729DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				369903B5155C313100B729DD /* MoustacheFace-Info.plist */,
+				369903B6155C313100B729DD /* InfoPlist.strings */,
+				369903B9155C313100B729DD /* main.m */,
+				369903BB155C313100B729DD /* MoustacheFace-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		369903A8155C313100B729DD /* MoustacheFace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 369903C7155C313100B729DD /* Build configuration list for PBXNativeTarget "MoustacheFace" */;
+			buildPhases = (
+				369903A5155C313100B729DD /* Sources */,
+				369903A6155C313100B729DD /* Frameworks */,
+				369903A7155C313100B729DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoustacheFace;
+			productName = MoustacheFace;
+			productReference = 369903A9155C313100B729DD /* MoustacheFace.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		369903A0155C313000B729DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MoustacheFace;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 369903A3155C313100B729DD /* Build configuration list for PBXProject "MoustacheFace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3699039E155C313000B729DD;
+			productRefGroup = 369903AA155C313100B729DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				369903A8155C313100B729DD /* MoustacheFace */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		369903A7155C313100B729DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369903B8155C313100B729DD /* InfoPlist.strings in Resources */,
+				369903C1155C313100B729DD /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		369903A5155C313100B729DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369903BA155C313100B729DD /* main.m in Sources */,
+				369903BE155C313100B729DD /* MoustacheFaceAppDelegate.m in Sources */,
+				369903C4155C313100B729DD /* MoustacheFaceViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		369903B6155C313100B729DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				369903B7155C313100B729DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		369903BF155C313100B729DD /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				369903C0155C313100B729DD /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		369903C5155C313100B729DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		369903C6155C313100B729DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		369903C8155C313100B729DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MoustacheFace/MoustacheFace-Prefix.pch";
+				INFOPLIST_FILE = "MoustacheFace/MoustacheFace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		369903C9155C313100B729DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MoustacheFace/MoustacheFace-Prefix.pch";
+				INFOPLIST_FILE = "MoustacheFace/MoustacheFace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		369903A3155C313100B729DD /* Build configuration list for PBXProject "MoustacheFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				369903C5155C313100B729DD /* Debug */,
+				369903C6155C313100B729DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		369903C7155C313100B729DD /* Build configuration list for PBXNativeTarget "MoustacheFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				369903C8155C313100B729DD /* Debug */,
+				369903C9155C313100B729DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 369903A0155C313000B729DD /* Project object */;
+}
