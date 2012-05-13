@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
-@interface MoustacheFaceViewController : UIViewController
 
+@interface MoustacheFaceViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+{
+
+}
 @end

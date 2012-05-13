@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36912313155E3883009CDD4A /* eyePatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 36912312155E3883009CDD4A /* eyePatch.png */; };
+		36912315155E3ED0009CDD4A /* uncleSAMhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 36912314155E3ED0009CDD4A /* uncleSAMhat.png */; };
+		36912318155E4D0E009CDD4A /* MetaCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36912317155E4D0E009CDD4A /* MetaCALayer.m */; };
+		3691231A155E6E69009CDD4A /* moustache.png in Resources */ = {isa = PBXBuildFile; fileRef = 36912319155E6E69009CDD4A /* moustache.png */; };
+		3691231F155E900D009CDD4A /* MasksViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3691231E155E900D009CDD4A /* MasksViews.xib */; };
 		369903AE155C313100B729DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903AD155C313100B729DD /* UIKit.framework */; };
 		369903B0155C313100B729DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903AF155C313100B729DD /* Foundation.framework */; };
 		369903B2155C313100B729DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903B1155C313100B729DD /* CoreGraphics.framework */; };
@@ -15,22 +20,53 @@
 		369903BE155C313100B729DD /* MoustacheFaceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 369903BD155C313100B729DD /* MoustacheFaceAppDelegate.m */; };
 		369903C1155C313100B729DD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369903BF155C313100B729DD /* MainStoryboard.storyboard */; };
 		369903C4155C313100B729DD /* MoustacheFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369903C3155C313100B729DD /* MoustacheFaceViewController.m */; };
+		369903CB155C3AAA00B729DD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903CA155C3AAA00B729DD /* AVFoundation.framework */; };
+		369903CD155C3AC800B729DD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903CC155C3AC800B729DD /* QuartzCore.framework */; };
+		369903CF155C3AD800B729DD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903CE155C3AD800B729DD /* CoreMedia.framework */; };
+		369903D1155C3AE800B729DD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903D0155C3AE800B729DD /* AssetsLibrary.framework */; };
+		369903D3155C3AF200B729DD /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903D2155C3AF200B729DD /* CoreImage.framework */; };
+		369903D5155C3B0000B729DD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903D4155C3B0000B729DD /* CoreVideo.framework */; };
+		369903D7155C3B1400B729DD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903D6155C3B1400B729DD /* ImageIO.framework */; };
+		36BDFA90155E9661000277EF /* MasksTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDFA8F155E9661000277EF /* MasksTableView.m */; };
+		36BDFA93155EA084000277EF /* MasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDFA92155EA084000277EF /* MasksTableViewCell.m */; };
+		36BDFA96155EAF98000277EF /* FaceMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDFA95155EAF98000277EF /* FaceMask.m */; };
+		36BDFA98155EE42A000277EF /* phantom1.png in Resources */ = {isa = PBXBuildFile; fileRef = 36BDFA97155EE42A000277EF /* phantom1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36912312155E3883009CDD4A /* eyePatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eyePatch.png; path = MoustacheFace/resources/eyePatch.png; sourceTree = "<group>"; };
+		36912314155E3ED0009CDD4A /* uncleSAMhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uncleSAMhat.png; path = MoustacheFace/resources/uncleSAMhat.png; sourceTree = "<group>"; };
+		36912316155E4D0E009CDD4A /* MetaCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetaCALayer.h; sourceTree = "<group>"; };
+		36912317155E4D0E009CDD4A /* MetaCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetaCALayer.m; sourceTree = "<group>"; };
+		36912319155E6E69009CDD4A /* moustache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moustache.png; path = MoustacheFace/resources/moustache.png; sourceTree = "<group>"; };
+		3691231E155E900D009CDD4A /* MasksViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MasksViews.xib; path = Views/MasksViews.xib; sourceTree = "<group>"; };
 		369903A9155C313100B729DD /* MoustacheFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoustacheFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369903AD155C313100B729DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		369903AF155C313100B729DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		369903B1155C313100B729DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		369903B5155C313100B729DD /* MoustacheFace-Info.plist */ = {isa = PBXFileReference; path = "MoustacheFace-Info.plist"; sourceTree = "<group>"; };
+		369903B5155C313100B729DD /* MoustacheFace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoustacheFace-Info.plist"; sourceTree = "<group>"; };
 		369903B7155C313100B729DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		369903B9155C313100B729DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		369903BB155C313100B729DD /* MoustacheFace-Prefix.pch */ = {isa = PBXFileReference; path = "MoustacheFace-Prefix.pch"; sourceTree = "<group>"; };
-		369903BC155C313100B729DD /* MoustacheFaceAppDelegate.h */ = {isa = PBXFileReference; path = MoustacheFaceAppDelegate.h; sourceTree = "<group>"; };
+		369903BB155C313100B729DD /* MoustacheFace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoustacheFace-Prefix.pch"; sourceTree = "<group>"; };
+		369903BC155C313100B729DD /* MoustacheFaceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoustacheFaceAppDelegate.h; sourceTree = "<group>"; };
 		369903BD155C313100B729DD /* MoustacheFaceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoustacheFaceAppDelegate.m; sourceTree = "<group>"; };
 		369903C0155C313100B729DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		369903C2155C313100B729DD /* MoustacheFaceViewController.h */ = {isa = PBXFileReference; path = MoustacheFaceViewController.h; sourceTree = "<group>"; };
+		369903C2155C313100B729DD /* MoustacheFaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoustacheFaceViewController.h; sourceTree = "<group>"; };
 		369903C3155C313100B729DD /* MoustacheFaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoustacheFaceViewController.m; sourceTree = "<group>"; };
+		369903CA155C3AAA00B729DD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		369903CC155C3AC800B729DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		369903CE155C3AD800B729DD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		369903D0155C3AE800B729DD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		369903D2155C3AF200B729DD /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		369903D4155C3B0000B729DD /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		369903D6155C3B1400B729DD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		36BDFA8E155E9661000277EF /* MasksTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasksTableView.h; path = Views/MasksTableView.h; sourceTree = "<group>"; };
+		36BDFA8F155E9661000277EF /* MasksTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasksTableView.m; path = Views/MasksTableView.m; sourceTree = "<group>"; };
+		36BDFA91155EA084000277EF /* MasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasksTableViewCell.h; path = Views/MasksTableViewCell.h; sourceTree = "<group>"; };
+		36BDFA92155EA084000277EF /* MasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasksTableViewCell.m; path = Views/MasksTableViewCell.m; sourceTree = "<group>"; };
+		36BDFA94155EAF98000277EF /* FaceMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceMask.h; sourceTree = "<group>"; };
+		36BDFA95155EAF98000277EF /* FaceMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceMask.m; sourceTree = "<group>"; };
+		36BDFA97155EE42A000277EF /* phantom1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = phantom1.png; path = MoustacheFace/resources/phantom1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,18 +74,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369903D7155C3B1400B729DD /* ImageIO.framework in Frameworks */,
+				369903D5155C3B0000B729DD /* CoreVideo.framework in Frameworks */,
+				369903D3155C3AF200B729DD /* CoreImage.framework in Frameworks */,
+				369903D1155C3AE800B729DD /* AssetsLibrary.framework in Frameworks */,
+				369903B2155C313100B729DD /* CoreGraphics.framework in Frameworks */,
+				369903CF155C3AD800B729DD /* CoreMedia.framework in Frameworks */,
+				369903CD155C3AC800B729DD /* QuartzCore.framework in Frameworks */,
+				369903CB155C3AAA00B729DD /* AVFoundation.framework in Frameworks */,
 				369903AE155C313100B729DD /* UIKit.framework in Frameworks */,
 				369903B0155C313100B729DD /* Foundation.framework in Frameworks */,
-				369903B2155C313100B729DD /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36912310155E3864009CDD4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36912314155E3ED0009CDD4A /* uncleSAMhat.png */,
+				36BDFA97155EE42A000277EF /* phantom1.png */,
+				36912312155E3883009CDD4A /* eyePatch.png */,
+				36912319155E6E69009CDD4A /* moustache.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		36912320155E9018009CDD4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3691231E155E900D009CDD4A /* MasksViews.xib */,
+				36BDFA8E155E9661000277EF /* MasksTableView.h */,
+				36BDFA8F155E9661000277EF /* MasksTableView.m */,
+				36BDFA91155EA084000277EF /* MasksTableViewCell.h */,
+				36BDFA92155EA084000277EF /* MasksTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		3699039E155C313000B729DD = {
 			isa = PBXGroup;
 			children = (
+				36912310155E3864009CDD4A /* Resources */,
 				369903B3155C313100B729DD /* MoustacheFace */,
 				369903AC155C313100B729DD /* Frameworks */,
 				369903AA155C313100B729DD /* Products */,
@@ -67,6 +134,13 @@
 		369903AC155C313100B729DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				369903D6155C3B1400B729DD /* ImageIO.framework */,
+				369903D4155C3B0000B729DD /* CoreVideo.framework */,
+				369903D2155C3AF200B729DD /* CoreImage.framework */,
+				369903D0155C3AE800B729DD /* AssetsLibrary.framework */,
+				369903CE155C3AD800B729DD /* CoreMedia.framework */,
+				369903CC155C3AC800B729DD /* QuartzCore.framework */,
+				369903CA155C3AAA00B729DD /* AVFoundation.framework */,
 				369903AD155C313100B729DD /* UIKit.framework */,
 				369903AF155C313100B729DD /* Foundation.framework */,
 				369903B1155C313100B729DD /* CoreGraphics.framework */,
@@ -77,12 +151,17 @@
 		369903B3155C313100B729DD /* MoustacheFace */ = {
 			isa = PBXGroup;
 			children = (
+				36912320155E9018009CDD4A /* Views */,
 				369903BC155C313100B729DD /* MoustacheFaceAppDelegate.h */,
 				369903BD155C313100B729DD /* MoustacheFaceAppDelegate.m */,
 				369903BF155C313100B729DD /* MainStoryboard.storyboard */,
 				369903C2155C313100B729DD /* MoustacheFaceViewController.h */,
 				369903C3155C313100B729DD /* MoustacheFaceViewController.m */,
 				369903B4155C313100B729DD /* Supporting Files */,
+				36912316155E4D0E009CDD4A /* MetaCALayer.h */,
+				36912317155E4D0E009CDD4A /* MetaCALayer.m */,
+				36BDFA94155EAF98000277EF /* FaceMask.h */,
+				36BDFA95155EAF98000277EF /* FaceMask.m */,
 			);
 			path = MoustacheFace;
 			sourceTree = "<group>";
@@ -151,6 +230,11 @@
 			files = (
 				369903B8155C313100B729DD /* InfoPlist.strings in Resources */,
 				369903C1155C313100B729DD /* MainStoryboard.storyboard in Resources */,
+				36912313155E3883009CDD4A /* eyePatch.png in Resources */,
+				36912315155E3ED0009CDD4A /* uncleSAMhat.png in Resources */,
+				3691231A155E6E69009CDD4A /* moustache.png in Resources */,
+				3691231F155E900D009CDD4A /* MasksViews.xib in Resources */,
+				36BDFA98155EE42A000277EF /* phantom1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +248,10 @@
 				369903BA155C313100B729DD /* main.m in Sources */,
 				369903BE155C313100B729DD /* MoustacheFaceAppDelegate.m in Sources */,
 				369903C4155C313100B729DD /* MoustacheFaceViewController.m in Sources */,
+				36912318155E4D0E009CDD4A /* MetaCALayer.m in Sources */,
+				36BDFA90155E9661000277EF /* MasksTableView.m in Sources */,
+				36BDFA93155EA084000277EF /* MasksTableViewCell.m in Sources */,
+				36BDFA96155EAF98000277EF /* FaceMask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +328,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoustacheFace/MoustacheFace-Prefix.pch";
 				INFOPLIST_FILE = "MoustacheFace/MoustacheFace-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -251,6 +340,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoustacheFace/MoustacheFace-Prefix.pch";
 				INFOPLIST_FILE = "MoustacheFace/MoustacheFace-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +365,7 @@
 				369903C9155C313100B729DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
