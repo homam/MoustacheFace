@@ -27,10 +27,10 @@ typedef CGRect (^FaceFeatureRectConverter)(CGRect faceRect);
 
 @property (nonatomic) MetaCALayerOrigin origin;
 @property (nonatomic) float widthRatioOfFace;
-@property (nonatomic, weak) MetaCALayer *featureLayer;
+//@property (nonatomic, weak) MetaCALayer *featureLayer;
 @property (nonatomic, strong) FaceFeatureDescriptorAdjuster xAdjuster;
 @property (nonatomic, strong) FaceFeatureDescriptorAdjuster yAdjuster;
--(void)adjustLayer:(CIFaceFeature *)face transformedFaceRect:(CGRect) faceRect rectConverter:(FaceFeatureRectConverter) converter;
+-(void)adjustLayer: (MetaCALayer *)layer withFace: (CIFaceFeature *)face transformedFaceRect:(CGRect) faceRect rectConverter:(FaceFeatureRectConverter) converter;
 
 
 //+(FaceFeatureDescriptorAdjuster) faceFeatureDescriptorAdjusterIdentity;

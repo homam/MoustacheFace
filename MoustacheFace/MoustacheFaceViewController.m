@@ -14,6 +14,7 @@
 #import "MetaCALayer.h"
 #import "MasksTableView.h"
 #import "FaceMask.h"
+#import "FaceFeatureAddOn.h"
 
 
 @interface MoustacheFaceViewController ()
@@ -38,7 +39,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *statusImageView;
 
-@property (nonatomic, strong) NSDictionary *addonImages;
+@property (nonatomic, strong) NSDictionary *addOnsDic;
 @property (weak, nonatomic) IBOutlet UIView *masksView;
 - (IBAction)startButtonTapped:(id)sender;
 
@@ -60,7 +61,7 @@
 @synthesize statusLabel = _statusLabel;
 @synthesize statusImageView = _statusImageView;
 
-@synthesize addonImages = _addonImages;
+@synthesize addOnsDic = _addOnsDic;
 @synthesize masksView = _masksView;
 
 
@@ -112,9 +113,9 @@
 
 -(void)drawFeatures:(NSArray *)features inBox:(CGRect)aperture {
     
-    typedef MetaCALayer * (^GetLayer)(NSString *layerName, UIImage *content);
+    typedef MetaCALayer * (^GetLayer)(NSString *layerName, FaceFeatureAddOn *addOn);
     
-    GetLayer getLayer = ^(NSString *layerName, UIImage *content) {
+    GetLayer getLayer = ^(NSString *layerName, FaceFeatureAddOn *addOn) {
         
         __block MetaCALayer *layer0 = nil;
         
@@ -130,6 +131,7 @@
         
         
         if(!layer0){
+            UIImage *content = addOn ? addOn.image : nil;
             layer0 = [MetaCALayer new];
             layer0.name = layerName;
             if(!content) {
@@ -145,38 +147,20 @@
         return  layer0;
     };
     
-    MetaCALayer *layerEyePatch = getLayer(@"layerEyePatch",[self.addonImages valueForKey:@"eyePatch"]);
+    FaceFeatureAddOn *eyePatchAddOn = [self.addOnsDic valueForKey:@"eyePatch"];
+    MetaCALayer *layerEyePatch = getLayer(@"layerEyePatch",eyePatchAddOn);
     CALayer *layer1 = getLayer(@"layer1",nil);
     layer1.hidden = YES;
-    MetaCALayer *layerMoustache = getLayer(@"layerMoustache",[self.addonImages valueForKey:@"moustache"]);
-    MetaCALayer *layerHat = getLayer(@"layerHat",[self.addonImages valueForKey:@"uncleSAMhat"]);
+    FaceFeatureAddOn *moustacheAddOn = [self.addOnsDic valueForKey:@"moustache"];
+    MetaCALayer *layerMoustache = getLayer(@"layerMoustache",moustacheAddOn);
+    FaceFeatureAddOn *hatAddOn = [self.addOnsDic valueForKey:@"uncleSAMhat"];
+    MetaCALayer *layerHat = getLayer(@"layerHat",hatAddOn);
     
     
-    FaceFeatureDescriptor *eyePatchDescriptor = [[FaceFeatureDescriptor alloc]initWithWidthRatioOfFace:.5 andOrigin:MetaCALayerOriginCenter
-    andXAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
-        return face.leftEyePosition.x - featureSize.width*.15;
-    } andYAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
-        return face.leftEyePosition.y;
-    }];
-    eyePatchDescriptor.featureLayer = layerEyePatch;
+
     
-    FaceFeatureDescriptor *moustacheDescriptor = [[FaceFeatureDescriptor alloc] initWithWidthRatioOfFace:.7 andOrigin:MetaCALayerOriginCenter 
-    andXAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
-        return face.mouthPosition.x - featureSize.width*.25;
-    } andYAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect faceSize) {
-        return face.mouthPosition.y;
-    }];
-    moustacheDescriptor.featureLayer = layerMoustache;
     
-    FaceDescriptor *hatDescriptor = [[FaceDescriptor alloc] initWithWidthRatioOfFace:1.2 
-       andOrigin:MetaCALayerOriginLeftBottom
-    andXAdjuster:^float(CIFaceFeature * face, CGSize featureSize, CGRect transformedFaceRect) {
-        return transformedFaceRect.origin.x-(featureSize.width -transformedFaceRect.size.width)*.5;
-    } 
-    andYAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
-        return transformedFaceRect.origin.y - transformedFaceRect.size.height*.2;
-    }];
-    hatDescriptor.featureLayer = layerHat;
+
 
     [CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
@@ -194,7 +178,7 @@
     CGFloat widthScaleBy = previewBox.size.width / aperture.size.height;
     CGFloat heightScaleBy = previewBox.size.height / aperture.size.width;
     
-    //self.statusLabel.text = [NSString stringWithFormat:@"ws: %f hs: %f", widthScaleBy, heightScaleBy ];//NSStringFromCGRect(previewBox)
+    self.statusLabel.text = [NSString stringWithFormat:@"%@", eyePatchAddOn ];//NSStringFromCGRect(previewBox)
     
     typedef CGRect (^FaceRectConverter)(CGRect faceRect);
     FaceRectConverter convertCGRect = ^(CGRect faceRect) {
@@ -233,9 +217,9 @@
         
         faceRect = convertCGRect(faceRect);
         
-        [eyePatchDescriptor adjustLayer:face transformedFaceRect:faceRect rectConverter:convertCGRect];
-        [moustacheDescriptor adjustLayer:face transformedFaceRect:faceRect rectConverter:convertCGRect];
-        [hatDescriptor adjustLayer:face transformedFaceRect:faceRect rectConverter:convertCGRect];
+        [eyePatchAddOn.descriptor adjustLayer: layerEyePatch withFace: face transformedFaceRect:faceRect rectConverter:convertCGRect];
+        [moustacheAddOn.descriptor adjustLayer: layerMoustache withFace: face transformedFaceRect:faceRect rectConverter:convertCGRect];
+        [hatAddOn.descriptor adjustLayer: layerHat withFace: face transformedFaceRect:faceRect rectConverter:convertCGRect];
         
         //[eyePatchDescriptor adjustLayer:face.leftEyePosition faceRect:originalFaceRect rectConverter:convertCGRect];
         //[moustacheDescriptor adjustLayer:face.mouthPosition faceRect:originalFaceRect rectConverter:convertCGRect];
@@ -257,14 +241,52 @@
     [super viewDidLoad];
     
     
+    /*
     NSArray *addonNames = [NSArray arrayWithObjects:@"eyePatch", @"uncleSAMhat", @"moustache", @"phantom1", nil];
     NSMutableDictionary *addonsDic = [[NSMutableDictionary alloc]initWithCapacity:addonNames.count];
     for(id name in addonNames){
         [addonsDic setValue:[UIImage imageNamed:name] forKey:name];
     }
-    self.addonImages = addonsDic ;
+    self.addonImages = addonsDic ;*/
+    
+    NSMutableDictionary __block *addonsDic = [[NSMutableDictionary alloc]initWithCapacity:4];
+    
+    void (^addFaceFeatureAddOn) (NSString *, FaceDescriptor *) = ^(NSString * identifier, FaceDescriptor * descriptor)  {
+        FaceFeatureAddOn *addOn = [[FaceFeatureAddOn alloc]initWithID:identifier andImage:[UIImage imageNamed:identifier] andDescriptor:descriptor];
+        [addonsDic setValue:addOn forKey:identifier];
+    };
     
     
+
+    
+    FaceFeatureDescriptor *eyePatchDescriptor = [[FaceFeatureDescriptor alloc]initWithWidthRatioOfFace:.5 andOrigin:MetaCALayerOriginCenter
+                                                                                          andXAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
+                                                                                              return face.leftEyePosition.x - featureSize.width*.15;
+                                                                                          } andYAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
+                                                                                              return face.leftEyePosition.y;
+                                                                                          }];
+    addFaceFeatureAddOn(@"eyePatch", eyePatchDescriptor);
+    
+
+    FaceFeatureDescriptor *moustacheDescriptor = [[FaceFeatureDescriptor alloc] initWithWidthRatioOfFace:.7 andOrigin:MetaCALayerOriginCenter 
+                                                                                            andXAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
+                                                                                                return face.mouthPosition.x - featureSize.width*.25;
+                                                                                            } andYAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect faceSize) {
+                                                                                                return face.mouthPosition.y;
+                                                                                            }];
+    addFaceFeatureAddOn(@"moustache", moustacheDescriptor);
+    
+    FaceDescriptor *hatDescriptor = [[FaceDescriptor alloc] initWithWidthRatioOfFace:1.2 
+                                                                           andOrigin:MetaCALayerOriginLeftBottom
+                                                                        andXAdjuster:^float(CIFaceFeature * face, CGSize featureSize, CGRect transformedFaceRect) {
+                                                                            return transformedFaceRect.origin.x-(featureSize.width -transformedFaceRect.size.width)*.5;
+                                                                        } 
+                                                                        andYAdjuster:^float(CIFaceFeature *face, CGSize featureSize, CGRect transformedFaceRect) {
+                                                                            return transformedFaceRect.origin.y - transformedFaceRect.size.height*.2;
+                                                                        }];
+    addFaceFeatureAddOn(@"uncleSAMhat", hatDescriptor);
+    
+    self.addOnsDic = addonsDic;
     MasksTableView *v = [self.masksView.subviews objectAtIndex:0];
     v.maskImagesDic = addonsDic;
     v.dataSource = v;

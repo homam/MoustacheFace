@@ -27,6 +27,7 @@
 		369903D3155C3AF200B729DD /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903D2155C3AF200B729DD /* CoreImage.framework */; };
 		369903D5155C3B0000B729DD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903D4155C3B0000B729DD /* CoreVideo.framework */; };
 		369903D7155C3B1400B729DD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369903D6155C3B1400B729DD /* ImageIO.framework */; };
+		36A052BB1566CFFB00EEF42C /* FaceFeatureAddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A052BA1566CFFB00EEF42C /* FaceFeatureAddOn.m */; };
 		36BDFA90155E9661000277EF /* MasksTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDFA8F155E9661000277EF /* MasksTableView.m */; };
 		36BDFA93155EA084000277EF /* MasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDFA92155EA084000277EF /* MasksTableViewCell.m */; };
 		36BDFA96155EAF98000277EF /* FaceMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDFA95155EAF98000277EF /* FaceMask.m */; };
@@ -60,6 +61,8 @@
 		369903D2155C3AF200B729DD /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		369903D4155C3B0000B729DD /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		369903D6155C3B1400B729DD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		36A052B91566CFFB00EEF42C /* FaceFeatureAddOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceFeatureAddOn.h; sourceTree = "<group>"; };
+		36A052BA1566CFFB00EEF42C /* FaceFeatureAddOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceFeatureAddOn.m; sourceTree = "<group>"; };
 		36BDFA8E155E9661000277EF /* MasksTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasksTableView.h; path = Views/MasksTableView.h; sourceTree = "<group>"; };
 		36BDFA8F155E9661000277EF /* MasksTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasksTableView.m; path = Views/MasksTableView.m; sourceTree = "<group>"; };
 		36BDFA91155EA084000277EF /* MasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasksTableViewCell.h; path = Views/MasksTableViewCell.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				36912317155E4D0E009CDD4A /* MetaCALayer.m */,
 				36BDFA94155EAF98000277EF /* FaceMask.h */,
 				36BDFA95155EAF98000277EF /* FaceMask.m */,
+				36A052B91566CFFB00EEF42C /* FaceFeatureAddOn.h */,
+				36A052BA1566CFFB00EEF42C /* FaceFeatureAddOn.m */,
 			);
 			path = MoustacheFace;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				36BDFA90155E9661000277EF /* MasksTableView.m in Sources */,
 				36BDFA93155EA084000277EF /* MasksTableViewCell.m in Sources */,
 				36BDFA96155EAF98000277EF /* FaceMask.m in Sources */,
+				36A052BB1566CFFB00EEF42C /* FaceFeatureAddOn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

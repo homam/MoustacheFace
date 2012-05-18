@@ -8,6 +8,7 @@
 
 #import "MasksTableView.h"
 #import "MasksTableViewCell.h"
+#import "FaceFeatureAddOn.h"
 
 @implementation MasksTableView
 
@@ -46,9 +47,14 @@
     static NSString *CellIdentifier = @"Cell";
     MasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     //cell.textLabel.text = [self.maskImagesDic.allKeys objectAtIndex:indexPath.row];
-    cell.maskImageView.image = [self.maskImagesDic objectForKey:[self.maskImagesDic.allKeys objectAtIndex:indexPath.row]];
+    FaceFeatureAddOn *addOn =  [self.maskImagesDic objectForKey:[self.maskImagesDic.allKeys objectAtIndex:indexPath.row]];
+    cell.maskImageView.image = addOn.image;
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 /*
